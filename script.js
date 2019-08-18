@@ -1,3 +1,5 @@
+alert("Test Message");
+
 let min = 1,
     max = 19;
 
