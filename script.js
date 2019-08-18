@@ -1,10 +1,13 @@
 
 
-let min = 1,
-    max = 19,
-    rand;
-
 function random(){
-    rand = Math.round(Math.random()*(max-min)+min);
+    
+    let min = +document.getElementById("min").value;
+    let max = +document.getElementById("max").value;   
+    if (min > max) {
+        alert("Ошибка! \nМаксимальное значение меньше минимального.");
+        return;
+    }    
+    let rand = Math.round(Math.random() * (max-min) + min);
     document.getElementById("res").textContent = rand;
 }
