@@ -1,7 +1,7 @@
 
+let countBtn = document.getElementById("count");
 
-function random(){
-    
+countBtn.addEventListener("click", function() {
     let min = +document.getElementById("min").value;
     let max = +document.getElementById("max").value;   
     if (min > max) {
@@ -10,4 +10,6 @@ function random(){
     }    
     let rand = Math.round(Math.random() * (max-min) + min);
     document.getElementById("res").textContent = rand;
-}
+});
+
+
