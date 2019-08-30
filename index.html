@@ -1,11 +1,18 @@
 <html>
     <head>
         <title>Рандомайзер</title>
+        <style>
+            #string-numbers-value {
+             width: 200px; /* Ширина поля в пикселах */
+            } 
+        </style>
     </head>
     <body>
         <p>Введите минимальное и максимальное значение числа:</p>
         <p>Минимимум: <input type="number" min="0" value="0" id="min"></p>
         <p>Максимум: <input type="number" min="0" value="10" id="max"></p>
+        <p><input type="checkbox" id="string-numbers">Ввести числа самостоятельно</p>
+        <div><input type="text" id="string-numbers-value" placeholder="Введите числа через пробел"></div>
         <p><button id="count">Вперед!</button></p>
         <h2 id="res">0</h2>
 
