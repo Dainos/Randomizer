@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>Рандомайзер</title>
@@ -9,8 +10,16 @@
     </head>
     <body>
         <p>Введите минимальное и максимальное значение числа:</p>
-        <p>Минимимум: <input type="number" min="0" value="0" id="min"></p>
-        <p>Максимум: <input type="number" min="0" value="10" id="max"></p>
+        <table>
+            <tr>
+                <td>Минимимум:</td>
+                <td><input type="number" min="0" value="0" id="min"></td>
+            </tr>
+            <tr>
+                <td>Максимум:</td>
+                <td><input type="number" min="0" value="10" id="max"></td>
+            </tr>
+        </table>
         <p><input type="checkbox" id="string-numbers">Ввести числа самостоятельно</p>
         <div><input type="text" id="string-numbers-value" placeholder="Введите числа через пробел"></div>
         <p><button id="count">Вперед!</button></p>

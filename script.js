@@ -1,5 +1,5 @@
 
-let countBtn = document.getElementById("count");
+let countBtn = document.getElementById("count"),
     res = document.getElementById("res"),
     stringNumbers = document.getElementById("string-numbers"),
     stringNumbersValue = document.getElementById("string-numbers-value"),
