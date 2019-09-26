@@ -1,0 +1,38 @@
+body {
+    text-align: center;
+    font-family: Cantarell;
+    font-size: 20px;
+}
+
+input {
+    font-size: 15px;
+    border-radius: 5px;    
+}
+
+.mode {
+    transform:scale(1.2);
+}
+
+table {
+    margin: auto;
+    text-align: right;
+}
+
+#radio_buttons{
+    text-align: left;
+    margin-top: 20px;
+}
+
+#res {
+    font-size: 75px;
+    margin-top: 30px;
+}
+
+#string-numbers-value {
+    width: 250px; /* Ширина поля в пикселах */
+}
+
+#count {
+    width: 100px;
+    height: 30px;
+}

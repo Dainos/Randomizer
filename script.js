@@ -1,24 +1,25 @@
 
 let countBtn = document.getElementById("count"),
     res = document.getElementById("res"),
-    stringNumbers = document.getElementById("string-numbers"),
+    radioBtns = document.getElementsByName("mode"),
+    radioBtns2 = document.getElementById("radio_buttons"),
     stringNumbersValue = document.getElementById("string-numbers-value"),
     minimum = document.getElementById("min"),
     maximum = document.getElementById("max");
 
 stringNumbersValue.hidden = true;
 
-stringNumbers.addEventListener("click", function() {
-    if (stringNumbers.checked) {
+radioBtns2.addEventListener("click", function(){
+    console.log(radioBtns[0].checked);
+    if (radioBtns[1].checked) {
         stringNumbersValue.hidden = false;
         minimum.disabled = true;
         maximum.disabled = true;
-    } else {
+    } else if (radioBtns[0].checked) {
         stringNumbersValue.hidden = true;
         minimum.disabled = false;
         maximum.disabled = false;
     }
-
 });
 
 
@@ -29,16 +30,13 @@ countBtn.addEventListener("click", function() {
         res.textContent = "Ошибка! Максимальное значение меньше минимального.";
         return;
     }
-    if (stringNumbers.checked) {
+    if (radioBtns[1].checked) {
         let arr = [];
         arr = stringNumbersValue.value.split(" ");
-        console.log(arr);
         let rand = Math.round(Math.random() * (arr.length-1));
-        console.log(rand);
-        console.log(arr[rand]);
         res.textContent = arr[rand];
 
-    } else {
+    } else if (radioBtns[0].checked) {
         let rand = Math.round(Math.random() * (max-min) + min);
         res.textContent = rand;
     }    
