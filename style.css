@@ -6,7 +6,7 @@ body {
 
 input {
     font-size: 15px;
-    border-radius: 5px;    
+    border-radius: 5px;
 }
 
 .mode {
@@ -30,6 +30,10 @@ table {
 
 #string-numbers-value {
     width: 250px; /* Ширина поля в пикселах */
+}
+
+#amount {
+    width: 100%;
 }
 
 #count {

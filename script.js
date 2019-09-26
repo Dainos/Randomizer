@@ -5,7 +5,8 @@ let countBtn = document.getElementById("count"),
     radioBtns2 = document.getElementById("radio_buttons"),
     stringNumbersValue = document.getElementById("string-numbers-value"),
     minimum = document.getElementById("min"),
-    maximum = document.getElementById("max");
+    maximum = document.getElementById("max"),
+    amount = document.getElementById("amount");
 
 stringNumbersValue.hidden = true;
 
@@ -31,14 +32,25 @@ countBtn.addEventListener("click", function() {
         return;
     }
     if (radioBtns[1].checked) {
-        let arr = [];
+        let arr = [],
+        rand,
+        result = "";
         arr = stringNumbersValue.value.split(" ");
-        let rand = Math.round(Math.random() * (arr.length-1));
-        res.textContent = arr[rand];
+        for (let i = 0; i < +amount.value; i++) {
+            rand = Math.round(Math.random() * (arr.length-1));
+            result += arr[rand] + " ";
+        }
+        res.textContent = result;
 
     } else if (radioBtns[0].checked) {
-        let rand = Math.round(Math.random() * (max-min) + min);
-        res.textContent = rand;
+        let rand, 
+        result = "";
+        for (let i = 0; i < +amount.value; i++) {
+            rand = Math.round(Math.random() * (max-min) + min);
+            console.log(rand);
+            result += rand + " ";
+        }
+        res.textContent = result;
     }    
 });
 
