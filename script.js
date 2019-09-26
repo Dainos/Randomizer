@@ -35,7 +35,12 @@ countBtn.addEventListener("click", function() {
         let arr = [],
         rand,
         result = "";
+        if (stringNumbersValue.value == "") {
+            alert("Заполните поле для чисел!");
+            return;
+        }
         arr = stringNumbersValue.value.split(" ");
+        
         for (let i = 0; i < +amount.value; i++) {
             rand = Math.round(Math.random() * (arr.length-1));
             result += arr[rand] + " ";
