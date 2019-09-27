@@ -23,8 +23,9 @@ radioBtns2.addEventListener("click", function(){
 
 
 countBtn.addEventListener("click", function() {
-    let min = +minimum.value;
-    let max = +maximum.value;   
+    let min = +minimum.value,
+    max = +maximum.value,
+    am = +amount.value;   
     if (min > max) {
         res.textContent = "Ошибка! Максимальное значение меньше минимального.";
         return;
@@ -39,8 +40,12 @@ countBtn.addEventListener("click", function() {
         }
         numbs = stringNumbersValue.value.split(" ");        
         
-        for (let i = 0; i < +amount.value; i++) {
+        for (let i = 0; i < am; i++) {
             rand = Math.round(Math.random() * (numbs.length-1));
+            if (reps.checked && am > numbs.length) {
+                alert("Количество требуемых чисел превышает количество возможных. Повторения неизбежны");
+                return;
+            }
             if (reps.checked && arr.indexOf(numbs[rand], 0) != -1) {
                 do rand = Math.round(Math.random() * (numbs.length-1));
                 while (arr.indexOf(numbs[rand], 0) != -1);
@@ -53,9 +58,13 @@ countBtn.addEventListener("click", function() {
     } else if (radioBtns[0].checked) {
         let rand, 
         arr = [];
-        for (let i = 0; i < +amount.value; i++) {
+        for (let i = 0; i < am; i++) {
             rand = Math.round(Math.random() * (max-min) + min); 
-            if (reps.checked && arr.indexOf(rand, 0) != -1) {
+            if (reps.checked && am > max - min) {
+                alert("Количество требуемых чисел превышает количество возможных. Повторения неизбежны");
+                return;
+            }
+            if (reps.checked && arr.indexOf(rand, 0) != -1) {                
                 do rand = Math.round(Math.random() * (max-min) + min);
                 while (arr.indexOf(rand, 0) != -1);
             }                     
