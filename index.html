@@ -22,16 +22,16 @@
         </table>
         <table id="radio_buttons">
             <tr>
-                <td><label><input name="mode" class="mode" type="radio" checked />Диапазон чисел</label></td>
+                <td><label><input name="mode" class="mode" type="radio" checked /> Диапазон чисел</label></td>
             </tr>
             <tr>
                 <td><label><input name="mode" class="mode" type="radio"> Ввод вручную</label></td>
             </tr>
         </table>
-        <p></p><div><input type="text" id="string-numbers-value" placeholder="Введите числа через пробел"></div></p>
+        <label><input type="checkbox" id="reps" checked> Исключить повторы</label>
+        <p></p><div><input type="text" id="string-numbers-value" placeholder="Введите числа через пробел" hidden></div></p>
         <p><button id="count">Вперед!</button></p>
         <p id="res">0</p>
-
 
         <script src=script.js></script>
     </body>

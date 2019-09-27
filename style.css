@@ -23,6 +23,10 @@ table {
     margin-top: 20px;
 }
 
+#reps {
+    transform:scale(1.2);
+}
+
 #res {
     font-size: 90px;
     margin-top: 30px;
@@ -30,7 +34,7 @@ table {
 }
 
 #string-numbers-value {
-    width: 250px; /* Ширина поля в пикселах */
+    width: 250px;
 }
 
 #amount {
