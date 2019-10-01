@@ -23,6 +23,15 @@ radioBtns2.addEventListener("click", function(){
 
 
 countBtn.addEventListener("click", function() {
+    count();
+});
+
+document.addEventListener("keydown", function(e) {
+    if (e.code == "Enter" || e.code == "NumpadEnter") count();
+});
+
+
+function count () {
     let min = +minimum.value,
     max = +maximum.value,
     am = +amount.value;   
@@ -71,5 +80,5 @@ countBtn.addEventListener("click", function() {
             arr.push(rand);
         }        
         res.textContent = arr.join(" ");
-    }    
-});
+    } 
+}
